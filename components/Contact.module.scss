@@ -1,0 +1,173 @@
+.contact{
+    margin-top: 4vh;
+    padding: 0;
+    display: grid;
+    grid-template-areas: 'form map';
+  
+  
+    .watermark{
+        position: absolute;
+        right: 10vw;
+        transform: translate(0, -20vw);
+        z-index: 1;
+        color: rgb(56, 50, 50);
+        font-size: 21vw;
+        font-family: 'Major Mono Display', monospace;
+        display: inline;
+    }
+    .form{
+        grid-area: form;
+        display: grid;
+        width: 40vw;
+        height: fit-content;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        .inputs{
+            width: 40vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 0;
+            margin: 0;
+            input{
+                width: 19vw;
+                margin-bottom: 5px;
+            }
+        }
+        textarea{
+            min-width: 39vw;
+            max-width: 39vw;
+        }
+        input, textarea{
+            min-height: 2vw;
+            background-color: rgb(56, 50, 50);
+            color: white;
+            margin-bottom: 5px;
+            text-align: start;
+            font: 12px Arial, Helvetica, sans-serif;
+            border: none;
+            &:focus-visible{
+                outline: 2px solid rgb(9, 156, 65);
+            }
+            &::placeholder{
+                color:rgb(9, 156, 65);
+                text-align: center;
+            }
+        }
+     
+        }
+        
+    }
+    .map{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.submit{
+    width: 200px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: 2px solid rgb(9, 156, 65);
+    .submitcon{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 60px;
+        overflow: hidden;
+        z-index: 0;
+        .flare{
+            width: 0px;
+            height: 0px;
+            border-radius: 150px;
+            background-color:rgb(9, 156, 65);
+            animation: shrink 0.5s ease-out;
+            @keyframes shrink {
+                from{
+                    width: 300px;
+                    height: 300px;
+                }
+                to{
+                    width: 00px;
+                    height: 00px;
+                }
+                
+            }
+        }
+    }
+    .string{
+        z-index: 2;
+        font: 20px "Helvetica Neue", "Helvetica", sans-serif;
+        background-color: transparent;
+        width: 200px;
+        height: 60px;
+        color: white;
+        border: none;
+    }
+}
+
+.submit:hover .flare{
+    width: 300px;
+    height: 300px;
+    animation: enlarge 0.5s ease-in;
+    @keyframes enlarge {
+        from{
+            width: 0px;
+            height: 0px;
+            border: 2px solid gray
+        }
+        to{
+            width: 300px;
+            height: 300px;
+        }
+        
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .form{
+            width: 100%;
+            height: fit-content;
+            form{
+                
+            .inputs{
+                width: 80vw;
+                input{
+                    width: 38.5vw;
+                }
+            }
+            textarea{
+                min-width: 80vw;
+                max-width: 80vw;
+            }
+
+         
+            }
+        }
+        
+    }
+    
+}

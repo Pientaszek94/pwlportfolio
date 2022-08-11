@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+.navbar{
+    width: 100%;
+    height: 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    .navcon{
+        width: 14vw;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .logocon{
+            margin-top:2vw;
+            background-color: gray;
+            width: 20vw;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid white;
+            .logo{
+                background-color: black;
+                position: absolute;
+               .logoh1{
+                font: 5vw 'Major Mono Display', monospace;
+                width: 11.5vw;
+                margin: 0;
+                padding: 0;
+               }
+               .logosub{
+                   margin: 0;
+                   width: 11.5;
+                    font: 2vw 'Teko', sans-serif;
+                    text-align: center;
+                    line-height: 1.2vw;
+               }
+
+            }
+            
+        }
+    }
+}

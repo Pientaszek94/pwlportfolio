@@ -1,0 +1,12 @@
+.mapcontainer{
+    width: 39vw;
+    height: 20vw;
+}
+
+#map-report a img { display:none; } 
+@media screen and (max-width: 600px) {
+    .mapcontainer{
+        width: 80vw;
+        height: 50vw;
+    }   
+}
