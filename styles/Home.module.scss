@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
+
 .hero{
     
     
@@ -47,7 +47,7 @@
         right: 10vw;
         transform: translate(0, -20vw);
         z-index: 1;
-        color: rgb(56, 50, 50);
+        opacity: 0.2;
         font-size: 21vw;
         font-family: 'Major Mono Display', monospace;
         display: inline;
@@ -60,6 +60,7 @@
         .title{
             font: 10vw "Helvetica Neue", "Helvetica", sans-serif;
             margin: 10px 0 0 0;
+            z-index: 2;
         }
         p{
             font: 12px Arial, Helvetica, sans-serif;

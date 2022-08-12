@@ -1,17 +1,19 @@
 import styles from './Contact.module.scss';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import AMaps from './parts/AMaps'
+import Maps from './parts/Maps';
+import AMaps from './parts/AMaps';
 
 function Contact() {
 
-    const [form, setForm]=useState({name:"", email:"", subject:"", message:""});
+    const [form, setForm]=useState({});
+
     const [sent, setSent]=useState(false);
 
     const sendEmail= (e)=>{
         e.preventDefault();
 
-        emailjs.sendForm('service_qy5sh3e', 'template_hbm1kyd', e.target, 'r4TyEcwLicH-kPcPe')
+        emailjs.sendForm('service_qy5sh3e', 'template_hbm1kyd', form, 'r4TyEcwLicH-kPcPe')
           .then((result) => {
               console.log(result.text);
           }, (error) => {
@@ -22,9 +24,11 @@ function Contact() {
     }
 
     const handleChange=(e)=>{
-        setForm({...form, [e.target.name]: e.target.value});
+        setForm({...form, [e.target.name]: e.target.value})
     }
 
+
+console.log(form)
   return (
     <div className={styles.contact}>
 
@@ -38,44 +42,42 @@ function Contact() {
                             <form onSubmit={sendEmail}>
         
                                     <div className={styles.inputs}>
-                                        <input type="text" name="name" value={form.name} onChange={handleChange} placeholder='Name' />
+                                        <input type="text" name="name" placeholder='Name' onChange={handleChange}/>
                                     
-                                        <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="Email" />
+                                        <input type="email" name="email" placeholder="Email" onChange={handleChange}/>
         
                                     </div>
                                     
                                     
-                                    <textarea name="subject" value={form.subject} onChange={handleChange} placeholder="Subject"/>
+                                    <textarea name="subject" placeholder="Subject" onChange={handleChange}/>
                                    
-                                    <textarea name="message" value={form.message} onChange={handleChange} placeholder='Message' />
+                                    <textarea name="message" placeholder='Message' onChange={handleChange}/>
         
-                                    {form.name!==""&&form.email!==""&&form.subject!==""&&form.message!==""?(
-
+        
                                     <div className={styles.submit}>
                                         <div className={styles.submitcon}>
                                                 <div className={styles.flare}></div>
                                         </div>
         
-                                        <button type="submit" className={styles.string} >Send Message</button>
+                                        {/* <button type="submit" className={styles.string}>Send Message</button> */}
         
                                         
                                     </div>
-
-                                    ): null}
-        
+                                    <button type="submit">Send Message</button>
         
                             </form>
                         </div>
                     ): (<div>
                             <h3 className={styles.message}>
-                                You have just sent me a message.
+                                You have just sent a message to me.
                                 Thank you!
                             </h3>
                     </div>)
                 }
               
                 <div className={styles.map}>
-                <AMaps/>
+                    {/* <Maps/> */}
+                    <AMaps/>
                 </div>
     </div>
   )

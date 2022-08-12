@@ -4,6 +4,8 @@ import Link from 'next/link'
 import Contact from '../components/Contact'
 import Hero from '../components/parts/Hero'
 import styles from '../styles/Home.module.scss'
+import pwl from '../public/pwl_screen.jpg'
+import strider from '../public/strider.jpg'
 
 const Motto= ({copy, role})=>{
   return (
@@ -27,16 +29,21 @@ export default function Home() {
 
  const pages=[
     {
-      img:"pwl_screen.jpg", alt:"PWL", url:"https://pwlfrontdev.herokuapp.com"
+      img: pwl, alt:"PWL", url:"https://pwlfrontdev.herokuapp.com"
     },
     {
-      img:'strider.jpg', alt:"Strider", url:"https://pientaszek94.github.io/maps"
+      img:strider, alt:"Strider", url:"https://pientaszek94.github.io/maps"
     }
 
   ];
 
   return (
     <div>
+
+      <Head>
+        <title>PWL FrontDev portfolio</title>
+        <meta name='description' content='Welcome to my humble portfolio website.'/>
+      </Head>
 
         <div className={styles.hero}>
             <Hero/>
@@ -86,8 +93,8 @@ export default function Home() {
                         <Link href={page.url} key={index}>
 
                               <div className={styles.site} >
-                                <img src={`/images/${page.img}`}  alt={page.alt} className={styles.screen}/>
-                                {/* <Image src={`/images/${page.img}`} layout alt={page.alt} className={styles.screen}/> */}
+                      
+                                <Image src={page.img} alt={page.alt} className={styles.screen}/>
                                 <div className={styles.try}>
                                   <h2>TRY ME</h2>
                                 </div>

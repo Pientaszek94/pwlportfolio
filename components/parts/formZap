@@ -5,24 +5,21 @@ import AMaps from './parts/AMaps'
 
 function Contact() {
 
-    const [form, setForm]=useState({name:"", email:"", subject:"", message:""});
+    const form= useRef();
+
     const [sent, setSent]=useState(false);
 
     const sendEmail= (e)=>{
         e.preventDefault();
 
-        emailjs.sendForm('service_qy5sh3e', 'template_hbm1kyd', e.target, 'r4TyEcwLicH-kPcPe')
+        emailjs.sendForm('service_qy5sh3e', 'template_hbm1kyd', form.current, 'r4TyEcwLicH-kPcPe')
           .then((result) => {
               console.log(result.text);
           }, (error) => {
               console.log(error.text);
           });
           setSent(true);
-          e.target.reset();
-    }
-
-    const handleChange=(e)=>{
-        setForm({...form, [e.target.name]: e.target.value});
+        //   e.target.reset();
     }
 
   return (
@@ -35,22 +32,21 @@ function Contact() {
                             You can write me message anytime, if you want, and I will reply you as soon as I can.
                             Can&apos;t wait to solve your problem!
                         </p>
-                            <form onSubmit={sendEmail}>
+                            <form ref={form} onSubmit={sendEmail}>
         
                                     <div className={styles.inputs}>
-                                        <input type="text" name="name" value={form.name} onChange={handleChange} placeholder='Name' />
+                                        <input type="text" name="name" placeholder='Name' />
                                     
-                                        <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="Email" />
+                                        <input type="email" name="email" placeholder="Email" />
         
                                     </div>
                                     
                                     
-                                    <textarea name="subject" value={form.subject} onChange={handleChange} placeholder="Subject"/>
+                                    <textarea name="subject" placeholder="Subject"/>
                                    
-                                    <textarea name="message" value={form.message} onChange={handleChange} placeholder='Message' />
+                                    <textarea name="message" placeholder='Message' />
         
-                                    {form.name!==""&&form.email!==""&&form.subject!==""&&form.message!==""?(
-
+        
                                     <div className={styles.submit}>
                                         <div className={styles.submitcon}>
                                                 <div className={styles.flare}></div>
@@ -60,8 +56,6 @@ function Contact() {
         
                                         
                                     </div>
-
-                                    ): null}
         
         
                             </form>

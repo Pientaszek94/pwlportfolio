@@ -3,6 +3,9 @@
     padding: 0;
     display: grid;
     grid-template-areas: 'form map';
+    .message{
+        font: 3vw 'Major Mono Display', monospace;
+    }
   
   
     .watermark{
@@ -113,13 +116,16 @@
         }
     }
     .string{
-        z-index: 2;
+        z-index: 5;
         font: 20px "Helvetica Neue", "Helvetica", sans-serif;
         background-color: transparent;
         width: 200px;
         height: 60px;
         color: white;
         border: none;
+        &:disabled{
+            color: red;
+        }
     }
 }
 

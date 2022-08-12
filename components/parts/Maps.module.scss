@@ -1,7 +1,11 @@
 .mapcontainer{
     width: 39vw;
     height: 20vw;
+    .gm-style{
+        display: none;
+    }
 }
+
 
 #map-report a img { display:none; } 
 @media screen and (max-width: 600px) {
