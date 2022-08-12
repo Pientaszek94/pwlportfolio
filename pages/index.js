@@ -53,7 +53,7 @@ export default function Home() {
                   About...Me
                 </h2>
                 <p>
-                  Hi, I'm Paweł and I'm here to help you build new web apps or just keep your code in a good shape.
+                  Hi, I&apos;m Paweł and I&apos;m here to help you build new web apps or just keep your code in a good shape.
                   I am interested in, probably, everthing that ever heard of. My special interests are cutting-edge technology, automotive and listening to a good Jazz.
                   <br/>
                   Having fun with coding started in high school when I learnd about primitive programming. Back then I made 
@@ -87,6 +87,7 @@ export default function Home() {
 
                               <div className={styles.site} >
                                 <img src={`/images/${page.img}`}  alt={page.alt} className={styles.screen}/>
+                                {/* <Image src={`/images/${page.img}`} layout alt={page.alt} className={styles.screen}/> */}
                                 <div className={styles.try}>
                                   <h2>TRY ME</h2>
                                 </div>
