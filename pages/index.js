@@ -61,7 +61,7 @@ export default function Home() {
                 </h2>
                 <p>
                   Hi, I&apos;m Paweł and I&apos;m here to help you build new web apps or just keep your code in a good shape.
-                  I am interested in, probably, everthing that ever heard of. My special interests are cutting-edge technology, automotive and listening to a good Jazz.
+                  I am probably interested in everything I&apos;ve ever heard of. My special interests are cutting-edge technology, automotive and listening to a good Jazz.
                   <br/>
                   Having fun with coding started in high school when I learnd about primitive programming. Back then I made 
                   very first calculator or HTML web site with no style sheets or logic, mechanics, APIs. It looked a bit weird
