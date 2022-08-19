@@ -29,8 +29,8 @@ useEffect(()=>{
           {
             id: 2,
             name: "You are here, my Friend",
-            // position:{lat:position.coords.latitude, lng: position.coords.longitude}
-            position:{lat: 12, lng: 12}
+            position:{lat:position.coords.latitude, lng: position.coords.longitude}
+            // position:{lat: 12, lng: 12}
           }
         
         ])
