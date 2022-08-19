@@ -117,7 +117,7 @@ export default function Home() {
 
                       <div className={styles.text}>
                           <h2 className={styles.title}>
-                            Contact with Me
+                            Contact Me
                           </h2>
                         <Contact/>
                         

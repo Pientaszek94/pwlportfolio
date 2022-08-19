@@ -76,6 +76,7 @@ function Contact() {
               
                 <div className={styles.map}>
                 <AMaps/>
+        
                 </div>
     </div>
   )

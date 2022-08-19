@@ -1,3 +1,67 @@
 .footer{
     border-top: 2px green solid;
+    margin-top: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h4{
+        font: 3vw "Helvetica Neue", "Helvetica", sans-serif; 
+        text-decoration:underline;
+        transition: color 0.5s ease-in-out;
+        cursor: pointer;
+        &:hover{
+            color: rgb(9, 156, 65);
+        }  
+    }
+    .f_logo{
+        margin: 20px;
+    }
+
+    
+
+    .tech{
+        // background-color: yellow;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+  
+        .sub_tech_off{
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+            height: 0;
+            z-index: 2;
+        }
+        .sub_tech{
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+           height: fit-content;
+       
+            p{
+            margin: 10px;
+            padding: 0;
+            font-family:"Helvetica Neue", "Helvetica", sans-serif;
+            transition: color 0.5s ease-in-out;
+            cursor: pointer;
+            text-decoration: underline;
+            z-index: 1;
+            &:hover{
+                color: rgb(9, 156, 65);
+            } 
+        }
+        }
+    }
+
+    .created{
+        font: 3vw 'Major Mono Display', monospace;
+    }
+    
 }

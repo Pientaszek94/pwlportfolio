@@ -23,13 +23,14 @@ useEffect(()=>{
         console.log("Longitude is :", position.coords.longitude);
         setMarkers([  {
             id: 1,
-            name: "You can find me here",
+            name: "I am here",
             position:{lat:50.1677, lng:18.9165}
           },
           {
             id: 2,
             name: "You are here, my Friend",
-            position:{lat:position.coords.latitude, lng: position.coords.longitude}
+            // position:{lat:position.coords.latitude, lng: position.coords.longitude}
+            position:{lat: 12, lng: 12}
           }
         
         ])
