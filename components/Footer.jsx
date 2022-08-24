@@ -18,14 +18,9 @@ function Footer() {
   console.log("",roll);
   return (
     <footer className={styles.footer}>
-            <div className={styles.f_logo}>
-
-                <Logo/>
-
-            </div>
 
             <div className={styles.tech}>
-                  <h4 onClick={Rolling}>Technology that I used</h4>
+                  <h5 onClick={Rolling}>Technology that I used</h5>
                   <div className={roll?styles.sub_tech:styles.sub_tech_off}>
                       {
                         techs.map((tech, index)=>(
@@ -39,6 +34,7 @@ function Footer() {
             </div>
             <div className={styles.created}>
               <h3>Created by PWL FrontDev 2022</h3>
+              <h4>{innerWidth}</h4>
             </div>
     </footer>
   )

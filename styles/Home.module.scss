@@ -1,16 +1,33 @@
+.whole{
+    width: 100%;
+    // border: 1px solid blue;
+    overflow: hidden;
+}
 
 .hero{
-    
-    
+ 
+
+    }
+
+.motto_sec{
+    width: 100%;
+    height: 40vh;
+    // background-color: gray;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+ 
     .motto{
-        margin-left: 3vw;
-        position: absolute;
-        top:55vh;
+    margin-left: 10vw;
+    position: relative;
+    top:0;
         font-family: "Helvetica Neue", "Helvetica", sans-serif;
         font-size: 40px;
         background-color: transparent;
         width: 350px;
         max-width: 80vw;
+        z-index: 1;
+
         
         .sub{
             background-color: transparent;
@@ -23,7 +40,7 @@
             bottom: -0em;
             opacity: 0;
             background-color: transparent;
-            color: rgb(9, 156, 65);
+            // color: rgb(9, 156, 65);
             
         }
         & .sub .child:nth-child(even){
@@ -32,11 +49,12 @@
             bottom: -0em;
             opacity: 0;
             background-color: transparent;
-            color: rgb(9, 156, 65);
+            // color: rgb(9, 156, 65);
             
         }
     }
 }
+
 
 .section{
     margin:0 10vw 0 10vw;
@@ -61,11 +79,31 @@
             font: 10vw "Helvetica Neue", "Helvetica", sans-serif;
             margin: 10px 0 0 0;
             z-index: 2;
+            &::first-letter{
+                color: rgb(27, 240, 148);
+            }
         }
         p{
-            font: 12px Arial, Helvetica, sans-serif;
+            font: 2vw Arial, Helvetica, sans-serif;
             text-align: justify;
+            -ms-word-break: break-all;
+            -ms-word-wrap: break-all;
+            -webkit-word-break: break-word;
+            -webkit-word-wrap: break-word;
+            word-break: break-word;
+            word-wrap: break-word;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            hyphens: auto;
             width: 100%;
+
+            @media screen and (max-width: 500px) {
+
+            &{
+                font-size: 15px;
+            }
+                
+            }
         }
         .sitecon{
             display: flex;
@@ -199,10 +237,11 @@
 
 @keyframes blink {
     from{
-        opacity: 0.4;
+        opacity: 1;
     }
     to{
         opacity: 1;
+        display: none;
     }
 }
 

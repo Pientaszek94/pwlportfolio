@@ -34,11 +34,11 @@ export default function Home() {
     {
       img:strider, alt:"Strider", url:"https://pientaszek94.github.io/maps"
     }
-
+    
   ];
-
+  
   return (
-    <div>
+    <div className={styles.whole}>
 
       <Head>
         <title>PWL FrontDev portfolio</title>
@@ -47,10 +47,13 @@ export default function Home() {
 
         <div className={styles.hero}>
             <Hero/>
-            <h1 className={styles.motto}>
-              <Motto copy="Welcome and, please, enjoy your scrolling."/> 
-            </h1>
         </div>
+            <div className={styles.motto_sec}>
+                <h1 className={styles.motto}>
+                  <Motto copy="Welcome and, please, enjoy your scrolling."/> 
+                </h1>
+
+            </div>
              {/* Section About me */}
              <div className={styles.section}>
             <h3 className={styles.watermark}> Me</h3>

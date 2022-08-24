@@ -1,7 +1,31 @@
 .canv{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: calc(100vh - 10vw);
+    height: calc(120vh + 120vw);
+    max-height: 400vh;
     margin: auto auto;
     padding: 0;
-    z-index: 0;
+    z-index: -1;
+    border-bottom: 1px blue solid;
+    background-color: rgb(220, 71, 96);
+
+    @media (min-width:320px) and (max-width: 480px){
+        height: calc(120vh + 137vw);
+    }
+    // @media (min-width:481px) 
+    @media (min-width:641px) and (max-width:960px) {
+        height: 134vh;
+    }
+    @media (min-width:961px)  and (max-width:1023px) {
+        height:calc(134vh + 36vw);
+    }
+    // @media (min-width:1025px) 
+    @media (min-width:1281px){
+            height: calc(210vh + 34vw);
+    }
+
+
+    
 }

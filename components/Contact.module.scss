@@ -85,6 +85,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 12px;
     // border: 2px solid rgb(9, 156, 65);
     .submitcon{
         position: absolute;
@@ -95,6 +96,7 @@
         width: 200px;
         height: 60px;
         overflow: hidden;
+        border-radius: 12px;
         z-index: 0;
         .flare{
             width: 0px;
@@ -123,6 +125,7 @@
         height: 60px;
         color: white;
         border: none;
+        border-radius: 12px;
         &:disabled{
             color: red;
         }
