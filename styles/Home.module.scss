@@ -1,13 +1,32 @@
-.whole{
-    width: 100%;
-    // border: 1px solid blue;
-    overflow: hidden;
-}
+// .whole{
 
-.hero{
- 
+//     @media screen and (orientation:landscape) {
+//         & .no_landscape{
+//             color: blue;
+//             width: 100%;
+//             height: 100vh;
+//             position: sticky;
+//             top: 0;
+//             left: 0;
+//             display: flex;
+//             flex-direction: row;
+//             justify-content: center;
+//             align-items: center;
+//             background-color: beige;
+//             z-index: 6;
 
-    }
+//         }
+        
+//     }
+
+//     @media screen and (orientation: portrait) {
+//         & .no_landscape{
+//             display: none;
+//         }
+        
+//     }
+
+// }
 
 .motto_sec{
     width: 100%;

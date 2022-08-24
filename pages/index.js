@@ -45,6 +45,10 @@ export default function Home() {
         <meta name='description' content='Welcome to my humble portfolio website.'/>
       </Head>
 
+        {/* <div className={styles.no_landscape}>
+          <h1>Please flip your device into portrait orientation</h1>
+        </div> */}
+
         <div className={styles.hero}>
             <Hero/>
         </div>
@@ -128,7 +132,7 @@ export default function Home() {
             </div>          
             {/* END of Sections */}
   
-
+              
 
 
         
