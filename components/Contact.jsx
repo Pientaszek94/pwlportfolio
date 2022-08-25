@@ -76,7 +76,15 @@ function Contact() {
               
                 <div className={styles.map}>
                 {/* <AMaps/> */}
-                <h3>We can even make an appointment using this number: <br/> +48 123 456 789</h3>
+                    <div className={styles.number}>
+
+                        <h3>We can even make an appointment using this number:  
+                            <a href='tel: +48 798 515 274'>        
+                                +48 798 515 274
+                            </a>
+                        </h3>
+
+                    </div>
                 </div>
     </div>
   )

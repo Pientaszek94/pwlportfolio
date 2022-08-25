@@ -15,7 +15,7 @@ function Footer() {
   const Rolling=()=>{
     setRoll(prevRoll=> !prevRoll)
   }
-  console.log("",roll);
+  
   return (
     <footer className={styles.footer}>
 
@@ -30,11 +30,11 @@ function Footer() {
                           </Link>
                         ))
                       }
+                      <h6>Width and Height of screen: {innerWidth}/{innerHeight}</h6>
                   </div>
             </div>
             <div className={styles.created}>
               <h3>Created by PWL FrontDev 2022</h3>
-              <h4>{innerWidth}</h4>
             </div>
     </footer>
   )
