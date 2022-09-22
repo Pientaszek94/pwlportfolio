@@ -1,4 +1,8 @@
 
+.whole{
+    position: relative;
+    
+}
 
 .motto_sec{
     width: 100%;
@@ -99,8 +103,9 @@
         .sitecon{
             display: flex;
             flex-direction: row;
-            align-items: center;
-            justify-content: center;
+            // align-items: center;
+            // justify-content: center;
+            // flex-wrap: wrap;
             .site{
                 width: 40vw;
                 aspect-ratio: 16/9;

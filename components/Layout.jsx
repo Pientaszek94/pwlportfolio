@@ -1,4 +1,4 @@
-import Footer from "./Footer"
+// import Footer from "./Footer"
 import Navbar from "./Navbar"
 
 
@@ -7,7 +7,7 @@ function Layout({children}) {
     <div>
         <Navbar/>
         {children}
-        <Footer/>
+        {/* <Footer/> */}
     </div>
   )
 }

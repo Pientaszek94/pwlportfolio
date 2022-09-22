@@ -3,18 +3,19 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Contact from '../components/Contact'
 import Hero from '../components/parts/Hero'
-import styles from '../styles/Home.module.scss'
 import pwl from '../public/pwl_screen.jpg'
 import strider from '../public/strider.jpg'
+import flash from '../public/flash.JPG'
+import Footer from '../components/Footer'
 
 const Motto= ({copy, role})=>{
   return (
-            <span aria-label={copy} role={role} className={styles.sub}>
+            <span aria-label={copy} role={role} className="sub">
                 {copy.split("").map((char, index)=>{
                     let style={"animation-delay": (0.5+index/10)+"s"}
 
                     return(
-                        <span aria-hidden='true' key={index} style={style} className={styles.child}>
+                        <span aria-hidden='true' key={index} style={style} className="child">
                          {char}
                         </span>
                     )
@@ -33,37 +34,37 @@ export default function Home() {
     },
     {
       img:strider, alt:"Strider", url:"https://pientaszek94.github.io/maps"
+    },
+    {
+      img: flash, alt:"TechNews", url:"https://technews-nine.vercel.app/"
     }
     
   ];
   
   return (
-    <div className={styles.whole}>
+    <div className='whole'>
 
       <Head>
         <title>PWL FrontDev portfolio</title>
         <meta name='description' content='Welcome to my humble portfolio website.'/>
       </Head>
 
-        {/* <div className={styles.no_landscape}>
-          <h1>Please flip your device into portrait orientation</h1>
-        </div> */}
 
-        <div className={styles.hero}>
+        <div className="hero">
             <Hero/>
         </div>
-            <div className={styles.motto_sec}>
-                <h1 className={styles.motto}>
+            <div className="motto_sec">
+                <h1 className="motto">
                   <Motto copy="Welcome and, please, enjoy your scrolling."/> 
                 </h1>
 
             </div>
              {/* Section About me */}
-             <div className={styles.section}>
-            <h3 className={styles.watermark}> Me</h3>
+             <div className="section">
+            <h3 className="watermark"> Me</h3>
 
-            <div className={styles.text}>
-                <h2 className={styles.title}>
+            <div className="text">
+                <h2 className="title">
                   About...Me
                 </h2>
                 <p>
@@ -80,11 +81,11 @@ export default function Home() {
         </div>
 
         {/* Section Portfolio */}
-        <div className={styles.section}>
-            <h3 className={styles.watermark}> WORK</h3>
+        <div className="section">
+            <h3 className="watermark"> WORK</h3>
 
-            <div className={styles.text}>
-                <h2 className={styles.title}>
+            <div className="text">
+                <h2 className="title">
                   My Portfolio
                 </h2>
                 <p>
@@ -92,17 +93,17 @@ export default function Home() {
 
                 </p>
 
-                <div className={styles.sitecon}>
+                <div className="sitecon">
 
                     {
                       pages.map((page, index)=>(
 
                         <Link href={page.url} key={index}>
 
-                              <div className={styles.site} >
+                              <div className="site" >
                       
-                                <Image src={page.img} alt={page.alt} className={styles.screen}/>
-                                <div className={styles.try}>
+                                <Image src={page.img} alt={page.alt} className="screen"/>
+                                <div className="try">
                                   <h2>TRY ME</h2>
                                 </div>
                               </div>
@@ -119,11 +120,11 @@ export default function Home() {
             </div>
         </div>
               {/* Section About me */}
-            <div className={styles.section}>
-                      <h3 className={styles.watermark}> Mail</h3>
+            <div className="section">
+                      <h3 className="watermark"> Mail</h3>
 
-                      <div className={styles.text}>
-                          <h2 className={styles.title}>
+                      <div className="text">
+                          <h2 className="title">
                             Contact Me
                           </h2>
                         <Contact/>
@@ -132,7 +133,7 @@ export default function Home() {
             </div>          
             {/* END of Sections */}
   
-              
+              <Footer/>
 
 
         

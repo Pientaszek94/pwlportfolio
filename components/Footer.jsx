@@ -9,7 +9,7 @@ function Footer() {
 
   const techs=[{name:'NEXT.js', url: "https://nextjs.org/"}, 
               {name:"SASS", url:"https://sass-lang.com/"}, 
-              {name:"Google Maps API", url:"https://developers.google.com/maps/documentation"}, 
+              // {name:"Google Maps API", url:"https://developers.google.com/maps/documentation"}, 
               {name:"Three.js", url:"https://threejs.org/"}]
 
   const Rolling=()=>{

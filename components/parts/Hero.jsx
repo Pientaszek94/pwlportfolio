@@ -1,6 +1,5 @@
 import React, {useRef, useState} from 'react'
 import {Canvas, useFrame} from "@react-three/fiber";
-import styles from './Hero.module.scss'
 
 const Box=(props)=>{
 
@@ -27,14 +26,15 @@ const Box=(props)=>{
 
 function Hero() {
   return (
-    <div className={styles.canv}>
-                            
-            <Canvas>
-                <ambientLight intensity={[0]} />
-                <directionalLight intensity={[12]} color={0xFFFF} position={[-15,0,3]}/>
-                <Box/>
-            </Canvas>
-    </div>
+   
+        <div className='canv'>
+                                
+                <Canvas>
+                    <ambientLight intensity={[0]} />
+                    <directionalLight intensity={[12]} color={0xFFFF} position={[-15,0,3]}/>
+                    <Box/>
+                </Canvas>
+        </div>
   )
 }
 

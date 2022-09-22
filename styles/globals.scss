@@ -17,6 +17,301 @@ body{
             font: 3vw 'Major Mono Display', monospace;
         }
     }
+
+
+    .whole{
+        position: relative;
+
+        
+    }
+
+    .canv{
+        z-index: -100;
+        position: fixed;
+        top: -30px;
+        left: 0;
+        width: 100%;
+        height: 110vh;
+        // background-color: yellow;
+    }
+    
+    .motto_sec{
+        width: 100%;
+        height: 50vh;
+        // background-color: gray;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+     
+        .motto{
+        margin-left: 10vw;
+        position: relative;
+        top:22vh;
+            font-family: "Helvetica Neue", "Helvetica", sans-serif;
+            font-size: 40px;
+            background-color: transparent;
+            // width: 350px;
+            max-width: 80vw;
+            z-index: 1;
+    
+            
+            .sub{
+                background-color: transparent;
+                font-size: larger;
+                cursor: default;
+            }
+            & .sub .child:nth-child(odd){
+                position: relative;
+                animation: move-color 2s forwards,  blink 10s ease-in;
+                bottom: -0em;
+                opacity: 0;
+                background-color: transparent;
+                // color: rgb(9, 156, 65);
+                
+            }
+            & .sub .child:nth-child(even){
+                position: relative;
+                animation: move-color 2s forwards, blink 15s ease-in;
+                bottom: -0em;
+                opacity: 0;
+                background-color: transparent;
+                // color: rgb(9, 156, 65);
+                
+            }
+        }
+    }
+    
+    
+    .section{
+        margin:0 10vw 0 10vw;
+        min-height: 21vw;
+        max-height: fit-content;
+        .watermark{
+            position: absolute;
+            right: 10vw;
+            transform: translate(0, -20vw);
+            z-index: 1;
+            opacity: 0.2;
+            font-size: 21vw;
+            font-family: 'Major Mono Display', monospace;
+            display: inline;
+        }
+        .text{
+            position: relative;
+            top: 0;
+            display: inline;
+            z-index: 2;
+            .title{
+                font: 10vw "Helvetica Neue", "Helvetica", sans-serif;
+                margin: 10px 0 0 0;
+                z-index: 2;
+                &::first-letter{
+                    color: rgb(27, 240, 148);
+                }
+            }
+            p{
+                font: 2vw Arial, Helvetica, sans-serif;
+                text-align: justify;
+                -ms-word-break: break-all;
+                -ms-word-wrap: break-all;
+                -webkit-word-break: break-word;
+                -webkit-word-wrap: break-word;
+                word-break: break-word;
+                word-wrap: break-word;
+                -webkit-hyphens: auto;
+                -moz-hyphens: auto;
+                hyphens: auto;
+                width: 100%;
+    
+                @media screen and (max-width: 500px) {
+    
+                &{
+                    font-size: 15px;
+                }
+                    
+                }
+            }
+            .sitecon{
+                width: 80vw;
+                height: fit-content;
+                display: flex;
+                flex-wrap: wrap;
+                .site{
+                    width: 40vw;
+                    aspect-ratio: 16/9;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    
+    
+                
+                    
+                    @keyframes dark {
+                        from{
+                            opacity: 0.7;
+                            width: 100%;
+                        }
+                        to{
+                            opacity: 0.2;
+                            width: 110%;
+                        }
+                        
+                    }
+    
+                    &:hover .screen{
+                        animation: dark 0.5s ease-in;
+                        opacity: 0.2;
+                        width: 110%;
+                    }
+                    
+                    .screen{
+                        width: 100%;
+                        aspect-ratio: 16/9;
+                        z-index: 0;
+                        opacity: 0.7;
+                        animation: light 0.5s ease-out;
+    
+                        @keyframes light {
+                            from{
+                                opacity: 0.2;
+                                width: 110%
+                            }
+                            to{
+                                opacity: 0.7;
+                                width: 100%;
+                            }
+                            
+                        }
+                    }
+                    &:hover .try{
+                        width: 20vw;
+                        height: 20vw;
+                        background-color:  rgb(9, 156, 65);
+                        border-radius: 10vw;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        // transition: width 1s, height 1s, border-radius 1s;
+                        animation: enlarge 0.5s ease-in;
+                        overflow: hidden;
+    
+                        @keyframes enlarge {
+                            from{
+                                width: 0;
+                                height: 0;
+                                border-radius: 0.5vw;
+                            }
+                            to{
+                                width: 20vw;
+                                height: 20vw;
+                                border-radius: 10vw;
+                            }
+                        }
+                    }
+                    .try{
+                        position: absolute;
+                        background-color:  rgb(9, 156, 65);
+                        width: 0;
+                        height: 0;
+                        border-radius: 0.5vw;
+                        overflow: hidden;
+                        // transition: width 1sm height 1s, border-radius 1s;
+                        animation: shrink 1s ease-out;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 0;
+                        padding: 0;
+                        cursor: pointer;
+                        
+                        @keyframes shrink {
+                            from{
+                                width: 20vw;
+                                height: 20vw;
+                                border-radius: 10vw;
+                            }
+                            to{
+                                width: 0;
+                                height: 0;
+                                border-radius: 0.5vw;
+                            }
+                            
+                        }
+    
+                        h2{
+                            width: 200px;
+                            text-align: center;
+                            margin: 0;
+                            padding: 0;
+                            font: 3vw 'Major Mono Display', monospace;
+    
+                        }
+                    }
+                   
+                }
+            }
+            
+            
+        }
+    }
+    
+    
+    
+    @keyframes blink {
+        from{
+            opacity: 1;
+        }
+        to{
+            opacity: 1;
+            display: none;
+        }
+    }
+    
+    
+    // @keyframes move-color {
+    //     0% {
+    //         bottom: -2em;
+    //         opacity: 0;
+    //       color: #040709;
+    //     }
+        
+    //     50% {
+    //         bottom: -0em;
+    //         color: #95f84e;
+            
+    //     }
+        
+    //     100% {
+    //       bottom: 0;
+    //       opacity: 1;
+    //       color: rgb(9, 156, 65);
+    //     }
+    //   }
+    
+    
+    // @keyframes move-text-color {
+    //     0% {
+    //         bottom: 2em;
+    //         opacity: 0;
+    //       color: #040709;
+    //     }
+        
+    //     50% {
+    //         bottom: -0em;
+    //         color: #95f84e;
+            
+    //     }
+        
+    //     100% {
+    //       bottom: 0;
+    //       opacity: 1;
+    //       color: rgb(9, 156, 65);
+    //     }
+    //   }
  
 }
 
