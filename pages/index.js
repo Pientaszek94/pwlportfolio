@@ -53,6 +53,7 @@ export default function Home() {
 
         <div className="hero">
             <Hero/>
+            
         </div>
             <div className="motto_sec">
                 <h1 className="motto">
