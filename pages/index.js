@@ -47,6 +47,7 @@ export default function Home() {
       <Head>
         <title>PWL FrontDev portfolio</title>
         <meta name='description' content='Welcome to my humble portfolio website.'/>
+        <meta name="google-site-verification" content="jH1PVnBIylnNgSjlU1KGvmwx7fTCIQ79e5lumLKTKoI" />
       </Head>
 
 
@@ -59,26 +60,6 @@ export default function Home() {
                 </h1>
 
             </div>
-             {/* Section About me */}
-             <div className="section">
-            <h3 className="watermark"> Me</h3>
-
-            <div className="text">
-                <h2 className="title">
-                  About...Me
-                </h2>
-                <p>
-                  Hi, I&apos;m Paweł and I&apos;m here to help you build new web apps or just keep your code in a good shape.
-                  I am probably interested in everything I&apos;ve ever heard of. My special interests are cutting-edge technology, automotive and listening to a good Jazz.
-                  <br/>
-                  Having fun with coding started in high school when I learnt about primitive programming. Back then I made 
-                  very first calculator or HTML web site with no style sheets or logic, mechanics, APIs. It looked a bit weird
-                  but eventually I found in it something interesting... So I have started to learn various programming languages and
-                  decided to  submit my documents to the Universtity of Technology and now... I am here with You. Cool, innit? :D
-                </p>
-               
-            </div>
-        </div>
 
         {/* Section Portfolio */}
         <div className="section">
@@ -89,7 +70,9 @@ export default function Home() {
                   My Portfolio
                 </h2>
                 <p>
-                  I humbly present to you my experimental work on various types of applications with newer APIs and programming languages.
+                  I humbly present to you my experimental 
+                  work on various types of applications with 
+                  newer APIs and special libraries.
 
                 </p>
 
@@ -131,6 +114,26 @@ export default function Home() {
                         
                       </div>
             </div>          
+             {/* Section About me */}
+             <div className="section">
+              <h3 className="watermark"> Me</h3>
+
+                  <div className="text">
+                      <h2 className="title">
+                        About Me
+                      </h2>
+                      <p>
+                        Hi, I&apos;m Paweł and I&apos;m here to help you build new web apps or just keep your code in a good shape.
+                        I am, probably, interested in everything I&apos;ve ever heard of. My special interests are cutting-edge technology, automotive and listening to a good Jazz.
+                        <br/>
+                        Having fun with coding started in high school when I learnt about primitive programming. Back then I made 
+                        very first calculator or HTML web site with no style sheets or logic, mechanics, APIs. It looked a bit weird
+                        but eventually I found in it something interesting... So I have started to learn various programming languages and
+                        decided to  submit my documents to the Universtity of Technology and now I am here with You.
+                      </p>
+                    
+                  </div>
+            </div>
             {/* END of Sections */}
   
               <Footer/>

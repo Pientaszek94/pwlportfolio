@@ -15,7 +15,7 @@ const Box=(props)=>{
           {/* <icosahedronGeometry attach="geometry" args={[2.5,3]} /> */}
           <torusKnotGeometry attach='geometry' args={[8,1,300,40,2,6]}/>
           <meshStandardMaterial attach="material" color={0xF12F}
-           roughness={0.1}  metalness={0.9} flatShading={false}/>
+           roughness={0.0}  metalness={0.9} flatShading={false}/>
         </mesh>
     </group>
     
