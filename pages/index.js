@@ -47,7 +47,7 @@ export default function Home() {
       <Head>
         <title>PWL FrontDev portfolio</title>
         <meta name='description' content='Welcome to my humble portfolio website.'/>
-        <meta name="google-site-verification" content="jH1PVnBIylnNgSjlU1KGvmwx7fTCIQ79e5lumLKTKoI" />
+        
       </Head>
 
 
